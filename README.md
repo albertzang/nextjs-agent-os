@@ -1,12 +1,12 @@
 # nextjs-agent-os
 
-npm package **`@nextjs-agent-os/cli`** — install and upgrade the 3-agent Product OS for Next.js + TypeScript projects on GitHub/Vercel.
+npm package **`@albertzang/nextjs-agent-os-cli`** — install and upgrade the 3-agent Product OS for Next.js + TypeScript projects on GitHub/Vercel.
 
 ## Quick start
 
 ```bash
-npx @nextjs-agent-os/cli@0.0.16 doctor --cwd /path/to/your-next-app
-npx @nextjs-agent-os/cli@0.0.16 install --cwd /path/to/your-next-app --config .agent-os/config.yaml
+npx @albertzang/nextjs-agent-os-cli@0.0.16 doctor --cwd /path/to/your-next-app
+npx @albertzang/nextjs-agent-os-cli@0.0.16 install --cwd /path/to/your-next-app --config .agent-os/config.yaml
 ```
 
 ## Client requirements

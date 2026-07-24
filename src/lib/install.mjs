@@ -7,7 +7,7 @@ import { flattenConfig, renderFile } from "./config.mjs";
 const PKG_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const CORE_ROOT = path.join(PKG_ROOT, "packages/core");
 export const OS_VERSION = "0.0.16";
-export const PACKAGE_NAME = "@nextjs-agent-os/cli";
+export const PACKAGE_NAME = "@albertzang/nextjs-agent-os-cli";
 
 /** OS-managed paths relative to client repo root (allowlist) */
 export function getManagedGlobs() {

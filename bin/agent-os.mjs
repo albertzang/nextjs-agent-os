@@ -121,7 +121,7 @@ async function main() {
     return;
   }
 
-  console.log(`@nextjs-agent-os/cli ${OS_VERSION}
+  console.log(`@albertzang/nextjs-agent-os-cli ${OS_VERSION}
 
 Usage:
   agent-os doctor [--cwd <path>]

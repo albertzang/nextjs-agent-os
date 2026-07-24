@@ -12,7 +12,7 @@
 | Public Homepage | `public-homepage` | [`backlogs/public-homepage-BACKLOG.md`](backlogs/public-homepage-BACKLOG.md) |
 | Admin Console | `admin-console` | [`backlogs/admin-console-BACKLOG.md`](backlogs/admin-console-BACKLOG.md) |
 
-Add your product features above. **Agent OS** is managed upstream via `@nextjs-agent-os/cli` — not a product backlog row.
+Add your product features above. **Agent OS** is managed upstream via `@albertzang/nextjs-agent-os-cli` — not a product backlog row.
 
 ## Item schema (required)
 

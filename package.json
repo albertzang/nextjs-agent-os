@@ -1,5 +1,5 @@
 {
-  "name": "@nextjs-agent-os/cli",
+  "name": "@albertzang/nextjs-agent-os-cli",
   "version": "0.0.16",
   "description": "Install and upgrade the Next.js 3-agent Product OS in client repos",
   "type": "module",

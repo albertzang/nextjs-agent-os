@@ -20,7 +20,7 @@ Work IDs: **`NNNN`** (descending in file). Schema matches client [`nextjs-agent-
 
 ### Description
 
-Extract 3-agent OS from ccvaa-web into **`@nextjs-agent-os/cli@0.0.16`**. OS-managed docs under **`nextjs-agent-os-docs/`**; CLI doctor/install/upgrade/diff; ccvaa-web first client.
+Extract 3-agent OS from ccvaa-web into **`@albertzang/nextjs-agent-os-cli@0.0.16`**. OS-managed docs under **`nextjs-agent-os-docs/`**; CLI doctor/install/upgrade/diff; ccvaa-web first client.
 
 **Acceptance:**
 - [x] `packages/core` templates parameterized

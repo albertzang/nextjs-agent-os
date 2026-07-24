@@ -3,7 +3,7 @@
 | Decision | Value |
 |----------|--------|
 | Upstream repo | [github.com/albertzang/nextjs-agent-os](https://github.com/albertzang/nextjs-agent-os) |
-| npm package | `@nextjs-agent-os/cli` |
+| npm package | `@albertzang/nextjs-agent-os-cli` |
 | Baseline semver | `0.0.16` |
 | git tag | `v0.0.16` |
 | `manifest.osRelease` | `"0.0.16"` |
