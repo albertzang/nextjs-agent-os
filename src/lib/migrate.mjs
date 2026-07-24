@@ -57,12 +57,12 @@ function mergeDir(src, dest) {
 
 function rewriteReferences(clientRoot, dryRun) {
   const replacements = [
-    [/docs\/protocols/g, "nextjs-agent-os-docs/protocols"],
-    [/docs\/templates/g, "nextjs-agent-os-docs/templates"],
-    [/docs\/handoffs/g, "nextjs-agent-os-docs/handoffs"],
-    [/docs\/reports/g, "nextjs-agent-os-docs/reports"],
-    [/docs\/product/g, "nextjs-agent-os-docs/product"],
-    [`docs/README.md`, `nextjs-agent-os-docs/README.md`],
+    [/(?<![\w-])docs\/protocols/g, "nextjs-agent-os-docs/protocols"],
+    [/(?<![\w-])docs\/templates/g, "nextjs-agent-os-docs/templates"],
+    [/(?<![\w-])docs\/handoffs/g, "nextjs-agent-os-docs/handoffs"],
+    [/(?<![\w-])docs\/reports/g, "nextjs-agent-os-docs/reports"],
+    [/(?<![\w-])docs\/product/g, "nextjs-agent-os-docs/product"],
+    [/(?<![\w-])docs\/README\.md/g, "nextjs-agent-os-docs/README.md"],
   ];
 
   function walk(dir) {
