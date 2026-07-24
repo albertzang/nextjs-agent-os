@@ -1,0 +1,22 @@
+version: "0.0.16"
+summary: Initial npm release — extract from ccvaa-web; nextjs-agent-os-docs root; main-safe increments.
+
+docMigrations:
+  - from: docs/protocols
+    to: nextjs-agent-os-docs/protocols
+  - from: docs/templates
+    to: nextjs-agent-os-docs/templates
+  - from: docs/handoffs
+    to: nextjs-agent-os-docs/handoffs
+  - from: docs/reports
+    to: nextjs-agent-os-docs/reports
+  - from: docs/product
+    to: nextjs-agent-os-docs/product
+
+prune:
+  - docs/README.md
+  - .cursor/rules/ccvaa-multi-agent.mdc
+
+notes:
+  - AGENTS.md primary; CLAUDE.md remains @AGENTS.md
+  - docs/members stays under docs/ (client domain)

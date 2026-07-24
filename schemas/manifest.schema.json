@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["osRelease", "packageVersion", "packageName", "installedAt", "managedFilesChecksum"],
+  "properties": {
+    "osRelease": { "type": "string", "pattern": "^0\\.0\\.\\d+$" },
+    "packageVersion": { "type": "string" },
+    "packageName": { "type": "string" },
+    "installedAt": { "type": "string", "format": "date-time" },
+    "managedFilesChecksum": { "type": "string" },
+    "docsRoot": { "type": "string", "default": "nextjs-agent-os-docs" }
+  }
+}

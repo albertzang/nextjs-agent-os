@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["project", "docs", "environments", "deploy"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["name", "title", "slug"],
+      "properties": {
+        "name": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "orgName": { "type": "string" }
+      }
+    },
+    "docs": {
+      "type": "object",
+      "properties": {
+        "root": { "type": "string", "default": "nextjs-agent-os-docs" }
+      }
+    },
+    "environments": {
+      "type": "object",
+      "required": ["dev", "production"],
+      "properties": {
+        "dev": { "type": "string" },
+        "production": { "type": "string" },
+        "productionHost": { "type": "string" },
+        "publicDomain": { "type": "string" },
+        "publicDomainHost": { "type": "string" }
+      }
+    },
+    "deploy": {
+      "type": "object",
+      "properties": {
+        "platform": { "enum": ["vercel"] },
+        "previewProtection": { "type": "boolean" }
+      }
+    },
+    "goLive": {
+      "type": "object",
+      "properties": {
+        "mode": { "enum": ["none", "edge-config", "custom"] },
+        "systemName": { "type": "string" }
+      }
+    },
+    "auth": {
+      "type": "object",
+      "properties": {
+        "qaAdmin": {
+          "type": "object",
+          "properties": {
+            "mode": { "type": "string" },
+            "provider": { "type": "string" },
+            "mailbox": { "type": "string" },
+            "mailPath": { "type": "string" },
+            "envVars": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "client": {
+      "type": "object",
+      "properties": {
+        "devMemorySkill": { "type": "string" }
+      }
+    }
+  }
+}

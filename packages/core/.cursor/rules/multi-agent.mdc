@@ -1,0 +1,44 @@
+---
+description: Shared {{project.title}} multi-agent OS — roles, secrets, git, environments
+alwaysApply: true
+---
+
+# {{project.title}} multi-agent OS (shared)
+
+## Roles
+
+| Role | Primary contact | Owns |
+|------|-----------------|------|
+| Product Manager | Human CEO | Scope, priorities, advice, product docs |
+| Developer | PM (via handoff) | Feature branches, PRs, implementation |
+| QA | PM (via handoff) | Pass 1 / Pass 2 / baseline when backlog **Verifier = `agent`**; admin mailbox login via `.env.local`; Preview bypass via `.env.local` |
+
+CEO talks **only** to the **Product Manager**. Repo docs are the shared brain — not chat history. PM invokes Developer / QA; CEO does not brief those roles directly.
+
+**Chat titles:** `Product Manager` · `Developer` · `QA` (fixed; rename on session start).
+
+## Canonical docs
+
+- `AGENTS.md` — OS overview
+- `{{docs.root}}/product/FEATURES.md` — living feature inventory (PM maintains); changelog **descending by date**
+- `{{docs.root}}/product/BACKLOG.md` — feature backlogs / work IDs `{feature-slug}-{NNNN}`
+- `{{docs.root}}/protocols/` — communication, handoff, GIT_DEPLOY, QA_AUTH, PREVIEW_PROTECTION, **CEO**
+- `{{docs.root}}/templates/` — backlog-item, handoff, QA report templates
+
+## Environments (agent Dev/QA)
+
+- Dev: http://localhost:3000/
+- Preview: Vercel URL for the feature branch/PR (pre-merge; **Deployment Protection** — bypass via `.env.local`)
+- Production: {{environments.production}}/ (`main` — QA Pass 2)
+- **Out of agent flow:** {{environments.publicDomain}}/ — CEO manual only (DNS/cache)
+
+Default ship path: feature branch → QA Preview → merge → QA on `{{environments.productionHost}}`. Each item **main-safe on `main` alone** — `{{docs.root}}/protocols/GIT_DEPLOY.md`.
+
+## Hard constraints
+
+- Never commit secrets (`.env.local`, credentials, mailbox passwords, `VERCEL_AUTOMATION_BYPASS_SECRET`)
+- Commit / push / merge only when CEO explicitly asks — **except:** (1) `agent-os-*` after CEO **`verified`** (PM ships same turn); (2) **self-evolve** feature-branch **commits** after CEO kickoff (merge still CEO-only)
+- Prefer feature branches + PRs when **Verifier = `agent`**; **`ceo` / `n/a`** default **`direct-to-main`** (do not invent feature-branch for ordinary agent-os docs)
+- Prefer small, focused changes; do not over-engineer
+- Agents do not use `{{environments.publicDomainHost}}` for Dev/QA passes
+- Next.js 16 differs from older Next — read `node_modules/next/dist/{{docs.root}}/` before novel APIs; use `proxy.ts` not deprecated `middleware.ts`

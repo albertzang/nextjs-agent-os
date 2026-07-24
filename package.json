@@ -1,0 +1,31 @@
+{
+  "name": "@nextjs-agent-os/cli",
+  "version": "0.0.16",
+  "description": "Install and upgrade the Next.js 3-agent Product OS in client repos",
+  "type": "module",
+  "bin": {
+    "agent-os": "./bin/agent-os.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "packages/core",
+    "schemas",
+    "migrations",
+    "RELEASE_NOTES"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cursor",
+    "nextjs",
+    "agent-os",
+    "vercel"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albertzang/nextjs-agent-os.git"
+  }
+}

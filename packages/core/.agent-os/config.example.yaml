@@ -1,0 +1,26 @@
+project:
+  name: my-app
+  title: My App
+  slug: my-app
+  orgName: My Org
+docs:
+  root: nextjs-agent-os-docs
+environments:
+  dev: http://localhost:3000
+  production: https://my-app.vercel.app
+  productionHost: my-app.vercel.app
+deploy:
+  platform: vercel
+  previewProtection: true
+goLive:
+  mode: none
+  systemName: feature flags
+auth:
+  qaAdmin:
+    mode: none
+    provider: none
+    mailbox: ""
+    mailPath: /admin
+    envVars: [ADMIN_EMAIL, ADMIN_PASS]
+client:
+  devMemorySkill: client-dev-memory
